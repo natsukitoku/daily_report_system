@@ -87,6 +87,7 @@ public class EmployeeService extends ServiceBase {
     public long countByCode(String code) {
 
         //指定した社員番号を保持する従業員の件数を取得する
+    	//戻り値の型が決まっている場合は引数に Class オブジェクトを渡す
         long employees_count = (long) em.createNamedQuery(JpaConst.Q_EMP_COUNT_REGISTERED_BY_CODE, Long.class)
                 .setParameter(JpaConst.JPQL_PARM_CODE, code)
                 .getSingleResult();

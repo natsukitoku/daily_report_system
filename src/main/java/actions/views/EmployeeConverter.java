@@ -20,11 +20,12 @@ public class EmployeeConverter {
 	 * @return Employeeのインスタンス
 	 */
 
+	//<条件式> ? <trueのときの値> : <falseのときの値>
 	public static Employee toModel(EmployeeView ev) {
 		return new Employee(
 				ev.getId(),
 				ev.getCode(),
-				ev.getCode(),
+				ev.getName(),
 				ev.getPassword(),
 				ev.getAdminFlag() == null
 						? null
